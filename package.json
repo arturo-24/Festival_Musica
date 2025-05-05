@@ -1,0 +1,32 @@
+{
+  "name": "festivaldemusica",
+  "version": "1.0.0",
+  "description": "Aprendiendo SASS & NPM",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server",
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturo-24/Festival_Musica.git"
+  },
+  "keywords": [
+    "SASS",
+    "NPM",
+    "GULP."
+  ],
+  "author": "Arturo Cochea @ArthurDev24",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturo-24/Festival_Musica/issues"
+  },
+  "homepage": "https://github.com/arturo-24/Festival_Musica#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.87.0"
+  }
+}
