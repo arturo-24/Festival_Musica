@@ -1,20 +1,2 @@
-@use 'base/variables' as v; // para sincronizar variables con el archivo variables.scss en el sass
-
-body {
-    font-family: v.$Fuente_principal;
-    font-optical-sizing: auto;
-    font-style: normal;
-    background-color: white;
-}
-
-h1 {
-    font-family: v.$Fuente_principal;
-}
-
-p {
-    font-family: v.$Fuente_principal;
-}
-
-a {
-    font-family: v.$Fuente_principal;
-}
+@forward 'base';
+@forward 'layout';

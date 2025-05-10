@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+
+
+.header {
+    background-color: v.$verde;
+        .contenido-header {
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    
+
+        h1 {
+            color: v.$blanco;
+        }
+}
+
+.navegacion-principal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                color: v.$blanco;
+                text-decoration: none;
+                font-size: 2.4rem;
+                padding: 1rem;
+                margin: 0 2rem;
+                border-radius: 0.5rem;
+                transition: all 0.3s ease-in-out;
+                &:hover { //El & hace que no tengas un problema con el css cuando utilizas hover
+                    background-color: v.$morado;
+                    color: v.$blanco;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            
+        }
+
+@mixin contenedor {
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.header-contenedor {
+    @include contenedor;
+    
+}
