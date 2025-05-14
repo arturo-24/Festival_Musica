@@ -18,10 +18,24 @@
                 <a href="#">Lineup</a>
                 <a href="#">Galeria</a>
                 <a href="#">Boletos</a>
+
             </nav>
         </div>
-
-
     </header>
+
+    <div class="video">
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Techno & EDM FESTIVAL</h2>
+                <p>Julio 2026, GUAYAQUI, ECUADOR</p>
+            </div>
+
+        </div>
+        <video autoplay loop muted> <!-- autoplay, loop ayuda que el video se repita solito, muted es un requisito que puso google para que el video no suene -->
+            <source src="video/dj.mp4" type="video/mp4"/> <!-- Esto es el formato que cubre navegadores usuales.-->
+            <source src="video/dj.webm" type="video/webm"/> <!-- Esto es el formato que cubre navegadores de Android y iOS.-->
+            <source src="video/dj.ogg" type="video/ogg"/> <!-- Esto es el formato que cubre navegadores de Android y iOS.-->
+        </video>
+    </div>
 </body>
 </html>
