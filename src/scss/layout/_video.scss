@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.video {
+    position: relative;
+    min-height: 50rem;
+    max-height: 70rem;
+    overflow: hidden; // Esto hace que el video se corte lo que estaba sobrebordado.
+
+    .overlay {
+        position: absolute;
+        background: linear-gradient(
+            270deg,
+            rgba(v.$morado, 60%), /* Este es la transapariencia */
+            rgba( color.adjust(v.$morado, $lightness:-30%), 60%) /* este oscuurece el color*/
+       );
+        inset: 0; 
+
+        display: flex;
+        align-items: center;
+    }
+
+
+    video {
+        display: block;
+        width: auto;
+        @include m.desktop{
+        width: 100%;
+        }
+    }
+}
+
+.contenido-video{
+   z-index: 10; //Con esto atras elementos que estan atras a adelante del video solo apra ser sleccionados
+
+    h2 {
+        color: v.$blanco;
+        font-size: 7rem; 
+        margin: 0; //  Esto le quita el area "amarilla" que es el margen.
+    }
+    p {
+        color: v.$blanco;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 0;
+        background-color: v.$rosa;
+        display: inline-block; // Para ajusstar el tamallo del cuadro rosado
+        padding: 1rem 2rem;
+    }
+}
