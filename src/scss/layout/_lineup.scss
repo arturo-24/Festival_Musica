@@ -1,0 +1,42 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup {
+   background-color: v.$rosa;
+    h3, .dia, .nombre-escenario {
+        color: v.$blanco;
+        text-align: center;
+        margin: 0;
+    }
+    
+    .dia {
+        font-size: 4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 2rem;
+    }
+
+    .escenarios-contenedor {
+        @include m.contenedor;
+        @include m.tablet{
+            @include m.grid(2);
+        }
+    }
+
+    .nombre-escenario {
+        color: v.$negro;
+        font-size: 3rem;
+        font-weight: 900;
+        margin: 3rem;
+    }
+
+    li {
+        font-weight: 700;
+        font-size: 3rem;
+        
+    }
+
+    .calendario span {
+        font-weight: 400;
+    }
+}

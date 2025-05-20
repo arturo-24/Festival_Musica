@@ -367,7 +367,7 @@ img {
   display: block;
 }
 
-body > section {
+body > section { /* */
   padding: 10rem 0;
 }
 
@@ -474,4 +474,67 @@ body > section {
   background-color: #F53756;
   display: inline-block;
   padding: 1rem 2rem;
+}
+
+.sobre-festival {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10rem;
+  }
+}
+
+.contenido-festival {
+  margin-top: 2rem;
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival .fecha {
+  color: #4CB8B3;
+  font-weight: 700;
+}
+.lineup {
+  background-color: #F53756;
+}
+.lineup h3, .lineup .dia, .lineup .nombre-escenario {
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+.lineup .dia {
+  font-size: 4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 2rem;
+}
+.lineup .escenarios-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .lineup .escenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10rem;
+  }
+}
+.lineup .nombre-escenario {
+  color: #000000;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 3rem;
+}
+.lineup li {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.lineup .calendario span {
+  font-weight: 400;
 }
