@@ -3,7 +3,7 @@
 
 .lineup {
    background-color: v.$rosa;
-    h3, .dia, .nombre-escenario {
+    h3, .dia {
         color: v.$blanco;
         text-align: center;
         margin: 0;
@@ -23,20 +23,48 @@
         }
     }
 
-    .nombre-escenario {
-        color: v.$negro;
-        font-size: 3rem;
-        font-weight: 900;
-        margin: 3rem;
+    .escenario {
+        padding-top: 3rem;
+        .nombre-escenario {
+            color: v.$negro;
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-align: center;
+        }
     }
 
-    li {
-        font-weight: 700;
-        font-size: 3rem;
+    .calendario {
+    @include m.resetear-lista;
+
+        li {
+            padding: 3rem; // le da un separado a todos los lados arriba y abajos, izquierda y derecha.
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 3rem;
+            font-weight: 700;
         
+
+            span {
+                font-weight: 400;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+        }
     }
 
-    .calendario span {
-        font-weight: 400;
+    .bg-amarillo {
+        background-color: v.$amarillo;
+        li:nth-child(odd) { // el "odd" solo selecciona lugares impares. y el "even" selecciona los pares.s
+            background-color: lighten(v.$amarillo, 5%);
+        }
     }
+   
+   // Para que el color de fondo sea verde
+   .bg-verde {
+       background-color: v.$verde;
+       li:nth-child(odd) {
+            background-color: lighten(v.$verde, 5%);
+        }
+   }
 }

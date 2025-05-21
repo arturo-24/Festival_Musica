@@ -1,0 +1,99 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.contenedor-boletos {
+    background-color: v.$verde;
+
+    h3 {
+        color: v.$blanco;
+        text-align: center;
+        margin: 0;
+    }
+
+    .boletos {
+
+        @include m.contenedor;
+        @include m.tablet{
+            @include m.grid(2);
+        }
+   
+    }
+
+}
+
+
+.pase {
+    transition: all 0.3s ease-in-out;
+    @include m.tablet{
+    transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+            
+        }
+    }
+    &-nombre { // Cuando tienes dos clases que comienzan con palabras iguales, puedes hacer un &-nombre para evitar mas lineas de Css
+        color: v.$blanco;
+        font-size: 3.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &-header,
+    &-footer {
+        padding: .5rem;
+
+
+        p {
+            text-align: center;
+            margin : 0;
+            color: v.$blanco;
+        }
+    }
+
+    &-header {
+        background-color: v.$rosa;
+
+        p {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 1rem 0;
+            font-weight: 500;
+        }
+    }
+
+    &-body {
+        background-color: v.$blanco;
+
+        ul {   
+            @include m.resetear-lista;
+            li{
+                text-align: left;
+                padding: 2rem ;
+                border-bottom: 1px solid #e1e1e1;
+            }
+            
+        }
+    }
+    
+    &-footer {
+        background-color: v.$blanco;
+        padding: 3rem;
+
+        p{
+            background-color: v.$morado;
+            padding: 1rem 0;
+            border-radius: 1rem;
+            &:hover {
+                background-color: darken(v.$morado, 20%);
+            }
+            font-size: 2.5rem;
+            font-weight: 800;
+
+        }
+    }
+
+
+}
