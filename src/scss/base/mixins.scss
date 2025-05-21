@@ -35,7 +35,7 @@
     grid-gap: $gap;
 }
 
-@mixin resetear-lista { // Sirve para quitar unos esitlos a un "ul" quue vienen predeterminado
+@mixin resetear-lista { // Sirve para quitar unos esitlos a un "ul" que vienen predeterminado
     margin: 0;
     padding: 0;
     list-style: none;

@@ -417,15 +417,19 @@ body > section { /* */
 }
 @media (min-width: 768px) {
   .navegacion-principal a:hover {
-    background-color: rgb(56.7272727273, 22.7878787879, 73.2121212121);
+    background-color: #752F97;
+    color: #FFFFFF;
+    transition: all 0.3s ease-in-out;
   }
 }
-.navegacion-principal .header-contenedor {
+
+.header-contenedor {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
 }
-.navegacion-principal .nav-contenedor {
+
+.nav-contenedor {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
@@ -645,4 +649,31 @@ body > section { /* */
 }
 .pase-footer p:hover {
   background-color: rgb(56.7272727273, 22.7878787879, 73.2121212121);
+}
+
+.footer {
+  background-color: #F53756;
+  padding: 3rem;
+}
+
+.footer-contenedor {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+.footer-contenedor p {
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0rem;
+}
+@media (min-width: 768px) {
+  .footer-contenedor p {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+  }
 }
