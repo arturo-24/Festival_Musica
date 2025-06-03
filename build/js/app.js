@@ -37,15 +37,20 @@ function mostrarImagen(i) {
 
 
     //agregar al html
-
     const body = document.querySelector('body');
+    body.classList.add('overflow-hidden');
     body.appendChild(modal);
 
-    console.log(modal);
 }
 
 function cerrarModal() {
     const modal = document.querySelector('.modal');
+    modal.classList.add('fade-out');
     
-    modal?.remove();  // Esto ahce que resumen un "if" con el "???"
+    setTimeout(() =>{
+        modal?.remove();  // Esto ahce que resumen un "if" con el "?"
+        const body = document.querySelector('body');
+        body.classList.remove('overflow-hidden'); // aqui te permite en borrar el bloqueo y que vuelva la barra
+    }, 500);
+  
 }
