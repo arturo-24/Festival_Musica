@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+ .galeria {
+    @include m.contenedor;
+    
+    &-imagenes {
+            @include m.grid(1, 2rem);
+        
+
+        @include m.telefono{
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.tablet{
+            @include m.grid(3, 2rem);
+        }
+
+        @include m.desktop{
+            @include m.grid(4, 2rem);
+        }
+        
+        img {
+            height: 100%;
+            object-fit: cover; // se ajustas la imagen a la altura y anchura de la caja a las bravas.
+        }
+    }
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(v.$negro, 0.7);
+    display: grid;
+    place-items: center; // Esto centra vertical y horizonalmente la caja.
+
+    img {
+        max-width: 100rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+}
