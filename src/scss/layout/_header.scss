@@ -5,6 +5,17 @@
 .header {
     background-color: v.$verde;
 
+    @include m.tablet {
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100; // Esto hace que en al seccion boletos no sea afectado en su desplazamiento
+        box-shadow: .1rem .2rem .4rem  v.$negro; // Esto realiza una sombra en el header barra de  navegaacion.
+    }
+}
+
         .contenido-header {
             padding: 2rem;
             @include m.tablet{
@@ -12,7 +23,6 @@
                 justify-content: space-between;
                 align-items: center;
             }   
-           
         }
         
 
@@ -44,15 +54,14 @@
                 border-radius: 0.5rem;
                 transition: all 0.3s ease-in-out;
                 @include m.tablet{
-                    &:hover { //El & hace que no tengas un problema con el css cuando utilizas hover
+                    &:hover,
+                    &.active { //El & hace que no tengas un problema con el css cuando utilizas hover
                         background-color: v.$morado;
                         color: v.$blanco;
                         transition: all 0.3s ease-in-out;
-                }
-                }
-              
+                    }
+                } 
             }
-            
         }
 
 @mixin contenedor {

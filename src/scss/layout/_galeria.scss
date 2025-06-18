@@ -45,6 +45,17 @@
     }
 }
 
+.btn-cerrar {
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   background-color: v.$blanco;
+   border: none;
+   color: v.$negro;
+   place-items: center;
+   font-weight: 700;
+   cursor: pointer;
+}
 // Efecto de Animaciones
 @keyframes fadeIn {
     0% {
