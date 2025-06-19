@@ -25,9 +25,12 @@
   },
   "homepage": "https://github.com/arturo-24/Festival_Musica#readme",
   "devDependencies": {
-    "gulp": "^5.0.0",
-    "gulp-sass": "^6.0.1",
-    "sass": "^1.87.0"
+    "glob": "^11.0.3",
+    "gulp": "^5.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.89.2",
+    "sharp": "^0.34.2"
   },
   "dependencies": {
     "gulp-notify": "^5.0.0",
